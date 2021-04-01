@@ -16,7 +16,7 @@
         android:layout_marginBottom="90dp"
         android:backgroundTint="#7AEAF8"
         android:text="시작하기"
-        android:fontFamily="@font/font"
+        android:fontFamily="@font/hoonparasol"
         android:textSize="30sp"
         android:textColor="#FFFFFF"
         >
