@@ -66,7 +66,7 @@ public class MainActivity2 extends AppCompatActivity {
         topText_a.setText(dt32.get(i).getName());
         bottomText_a.setText(dt32.get(i+1).getName());
 
-
+        Toast.makeText(getApplicationContext(),"16강 시작!", Toast.LENGTH_SHORT).show();
         leftImgView_a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,6 +101,7 @@ public class MainActivity2 extends AppCompatActivity {
                 rightImgView.setImageResource(dt16.get(i+1).getId());
                 topText.setText(dt16.get(i).getName());
                 bottomText.setText(dt16.get(i+1).getName());
+                Toast.makeText(getApplicationContext(),"8강 시작!", Toast.LENGTH_SHORT).show();
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt32.get(i).getId());
@@ -126,6 +127,7 @@ public class MainActivity2 extends AppCompatActivity {
                 rightImgView.setImageResource(dt8.get(i+1).getId());
                 topText.setText(dt8.get(i).getName());
                 bottomText.setText(dt8.get(i+1).getName());
+                Toast.makeText(getApplicationContext(),"4강 시작!", Toast.LENGTH_SHORT).show();
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt16.get(i).getId());
@@ -148,6 +150,7 @@ public class MainActivity2 extends AppCompatActivity {
                 rightImgView.setImageResource(dt4.get(i+1).getId());
                 topText.setText(dt4.get(i).getName());
                 bottomText.setText(dt4.get(i+1).getName());
+                Toast.makeText(getApplicationContext(),"준결승 시작!", Toast.LENGTH_SHORT).show();
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt8.get(i).getId());
@@ -175,6 +178,7 @@ public class MainActivity2 extends AppCompatActivity {
                 rightImgView.setImageResource(dt2.get(i+1).getId());
                 topText.setText(dt2.get(i).getName());
                 bottomText.setText(dt2.get(i+1).getName());
+                Toast.makeText(getApplicationContext(),"결승 시작!", Toast.LENGTH_SHORT).show();
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt4.get(i).getId());
