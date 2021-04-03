@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity2 extends AppCompatActivity {
-    public List<Integer> imgSrc32G = new ArrayList<>(Arrays.asList(R.drawable.alpaca, R.drawable.bat, R.drawable.bear, R.drawable.bird, R.drawable.brother, R.drawable.cat, R.drawable.chick,
+    /* public List<Integer> imgSrc32G = new ArrayList<>(Arrays.asList(R.drawable.alpaca, R.drawable.bat, R.drawable.bear, R.drawable.bird, R.drawable.brother, R.drawable.cat, R.drawable.chick,
             R.drawable.chicken, R.drawable.deer, R.drawable.dog, R.drawable.elephant, R.drawable.fox, R.drawable.giraffe, R.drawable.goldfish,
             R.drawable.hamster, R.drawable.hedgehog, R.drawable.horse, R.drawable.iguana, R.drawable.lion, R.drawable.meerkat, R.drawable.mouse,
             R.drawable.parrot, R.drawable.penguin, R.drawable.pig, R.drawable.rabbit, R.drawable.snake, R.drawable.squirrel, R.drawable.tiger,
@@ -50,15 +50,15 @@ public class MainActivity2 extends AppCompatActivity {
     TextView bottomText = (TextView)findViewById(R.id.name2);
 
     public int round = 16;
-    public int cnt = 0;
+    public int cnt = 0; */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
 
-        //16강 진행
-        leftImgView.setOnClickListener(new View.OnClickListener() {
+
+        /* leftImgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -69,12 +69,12 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
 
             }
-        });
+        }); */
 
 
 
     }
-
+    /*
     protected void changeImgAndText(int index, int rand, int rand1) {
         if(round == 16) {
             if (cnt == 15) {
@@ -126,7 +126,7 @@ public class MainActivity2 extends AppCompatActivity {
             //테스트용 메시지
             Toast.makeText(getApplicationContext(),animalNameWin,Toast.LENGTH_LONG).show();
         }
-    }
+    } */
 
 
 
