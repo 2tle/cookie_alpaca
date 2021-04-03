@@ -97,14 +97,21 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
-            } else cnt++;
+                leftImgView.setImageResource(dt16.get(i).getId());
+                rightImgView.setImageResource(dt16.get(i+1).getId());
+                topText.setText(dt16.get(i).getName());
+                bottomText.setText(dt16.get(i+1).getName());
+            } else {
+                cnt++;
+                leftImgView.setImageResource(dt32.get(i).getId());
+                rightImgView.setImageResource(dt32.get(i+1).getId());
+                topText.setText(dt32.get(i).getName());
+                bottomText.setText(dt32.get(i+1).getName());
+            }
 
 
 
-            leftImgView.setImageResource(dt32.get(i).getId());
-            rightImgView.setImageResource(dt32.get(i+1).getId());
-            topText.setText(dt32.get(i).getName());
-            bottomText.setText(dt32.get(i+1).getName());
+
         }
         else if(round == 8) {
             if(leftOrRight == 0) { //왼쪽 버튼이 눌렸다면
@@ -115,14 +122,18 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
-            } else cnt++;
+                leftImgView.setImageResource(dt8.get(i).getId());
+                rightImgView.setImageResource(dt8.get(i+1).getId());
+                topText.setText(dt8.get(i).getName());
+                bottomText.setText(dt8.get(i+1).getName());
+            } else {
+                cnt++;
+                leftImgView.setImageResource(dt16.get(i).getId());
+                rightImgView.setImageResource(dt16.get(i+1).getId());
+                topText.setText(dt16.get(i).getName());
+                bottomText.setText(dt16.get(i+1).getName());
+            }
 
-
-
-            leftImgView.setImageResource(dt16.get(i).getId());
-            rightImgView.setImageResource(dt16.get(i+1).getId());
-            topText.setText(dt16.get(i).getName());
-            bottomText.setText(dt16.get(i+1).getName());
 
         } else if(round == 4) {
             if(leftOrRight == 0) { //왼쪽 버튼이 눌렸다면
@@ -133,14 +144,21 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
-            } else cnt++;
+                leftImgView.setImageResource(dt4.get(i).getId());
+                rightImgView.setImageResource(dt4.get(i+1).getId());
+                topText.setText(dt4.get(i).getName());
+                bottomText.setText(dt4.get(i+1).getName());
+            } else {
+                cnt++;
+                leftImgView.setImageResource(dt8.get(i).getId());
+                rightImgView.setImageResource(dt8.get(i+1).getId());
+                topText.setText(dt8.get(i).getName());
+                bottomText.setText(dt8.get(i+1).getName());
+            }
 
 
 
-            leftImgView.setImageResource(dt8.get(i).getId());
-            rightImgView.setImageResource(dt8.get(i+1).getId());
-            topText.setText(dt8.get(i).getName());
-            bottomText.setText(dt8.get(i+1).getName());
+
 
         } else if(round == 2) {
 
@@ -153,20 +171,27 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
-            } else cnt++;
+                leftImgView.setImageResource(dt2.get(i).getId());
+                rightImgView.setImageResource(dt2.get(i+1).getId());
+                topText.setText(dt2.get(i).getName());
+                bottomText.setText(dt2.get(i+1).getName());
+            } else {
+                cnt++;
+                leftImgView.setImageResource(dt4.get(i).getId());
+                rightImgView.setImageResource(dt4.get(i+1).getId());
+                topText.setText(dt4.get(i).getName());
+                bottomText.setText(dt4.get(i+1).getName());
+            }
 
 
 
-            leftImgView.setImageResource(dt4.get(i).getId());
-            rightImgView.setImageResource(dt4.get(i+1).getId());
-            topText.setText(dt4.get(i).getName());
-            bottomText.setText(dt4.get(i+1).getName());
+
         } else if(round == 1) {
+            if(leftOrRight == 0) winner = dt2.get(0);
+            else winner = dt2.get(1);
 
-            winner = dt2.get(0);
 
-
-            //다음 액티비티에 winner를 넘겨주기!! 아래 작성된 토스트는 임시임!
+            //다음 액티비티에 winner 를 넘겨주기!! 아래 작성된 토스트는 임시임!
             Toast.makeText(getApplicationContext(),winner.getName(), Toast.LENGTH_SHORT).show();
         }
     }
