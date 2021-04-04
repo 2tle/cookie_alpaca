@@ -24,7 +24,7 @@
         android:id="@+id/rightBtn"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="290dp"
         android:src="@drawable/alpaca"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -41,7 +41,7 @@
         android:fontFamily="@font/hoonparasol"
         android:textColor="#ffffff"
         android:textSize="56sp"
-        android:background="#FF5675"
+        android:background="#FF3157"
         android:textAlignment="center"
         android:gravity="center"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -87,6 +87,23 @@
         android:layout_marginBottom="20dp"
         android:id="@+id/name2"
         >
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="N강"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/hoonparasol"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="#E1FF5675"
+        android:id="@+id/round">
 
     </TextView>
 
