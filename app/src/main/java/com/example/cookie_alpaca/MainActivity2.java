@@ -2,17 +2,12 @@ package com.example.cookie_alpaca;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.media.Image;
+import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -202,9 +197,10 @@ public class MainActivity2 extends AppCompatActivity {
             if(leftOrRight == 0) winner = dt2.get(0);
             else winner = dt2.get(1);
 
-
-            //다음 액티비티에 winner 를 넘겨주기!! 아래 작성된 토스트는 임시임!
-            Toast.makeText(getApplicationContext(),winner.getName(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
+            intent.putExtra("imgSrc",winner.getId());
+            intent.putExtra("name",winner.getName());
+            startActivity(intent);
         }
     }
 
