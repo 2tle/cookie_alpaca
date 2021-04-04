@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -59,6 +61,8 @@ public class MainActivity2 extends AppCompatActivity {
         TextView topText_a = (TextView)findViewById(R.id.name1);
         TextView bottomText_a = (TextView)findViewById(R.id.name2);
 
+        TextView roundText = (TextView)findViewById(R.id.round);
+
         //초기 설정
         leftImgView_a.setImageResource(dt32.get(i).getId());
         rightImgView_a.setImageResource(dt32.get(i+1).getId());
@@ -66,13 +70,13 @@ public class MainActivity2 extends AppCompatActivity {
         topText_a.setText(dt32.get(i).getName());
         bottomText_a.setText(dt32.get(i+1).getName());
 
-        Toast.makeText(getApplicationContext(),"16강 시작!", Toast.LENGTH_SHORT).show();
+        roundText.setText("16강");
         leftImgView_a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 i = i + 2;
                 //버튼 눌리면 이미지 텍스트 변경하기
-                changeImgAndText(leftImgView_a,rightImgView_a,topText_a,bottomText_a,0);
+                changeImgAndText(leftImgView_a,rightImgView_a,topText_a,bottomText_a,roundText,0);
 
             }
         });
@@ -80,14 +84,14 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 i += 2;
-                changeImgAndText(leftImgView_a,rightImgView_a,topText_a,bottomText_a,1);
+                changeImgAndText(leftImgView_a,rightImgView_a,topText_a,bottomText_a,roundText,1);
             }
         });
 
 
 
     }
-    public void changeImgAndText(ImageButton leftImgView, ImageButton rightImgView, TextView topText, TextView bottomText, int leftOrRight) {
+    public void changeImgAndText(ImageButton leftImgView, ImageButton rightImgView, TextView topText, TextView bottomText, TextView rnd, int leftOrRight) {
         if(round == 16) { //16강이면!
             if(leftOrRight == 0) { //왼쪽 버튼이 눌렸다면
                 dt16.add(dt32.get(i-2));
@@ -97,11 +101,13 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
+                Collections.shuffle(dt16);
+                rnd.setText("8강");
                 leftImgView.setImageResource(dt16.get(i).getId());
                 rightImgView.setImageResource(dt16.get(i+1).getId());
                 topText.setText(dt16.get(i).getName());
                 bottomText.setText(dt16.get(i+1).getName());
-                Toast.makeText(getApplicationContext(),"8강 시작!", Toast.LENGTH_SHORT).show();
+
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt32.get(i).getId());
@@ -123,11 +129,12 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
+                Collections.shuffle(dt8);
+                rnd.setText("4강");
                 leftImgView.setImageResource(dt8.get(i).getId());
                 rightImgView.setImageResource(dt8.get(i+1).getId());
                 topText.setText(dt8.get(i).getName());
                 bottomText.setText(dt8.get(i+1).getName());
-                Toast.makeText(getApplicationContext(),"4강 시작!", Toast.LENGTH_SHORT).show();
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt16.get(i).getId());
@@ -146,11 +153,12 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
+                Collections.shuffle(dt4);
+                rnd.setText("준결승");
                 leftImgView.setImageResource(dt4.get(i).getId());
                 rightImgView.setImageResource(dt4.get(i+1).getId());
                 topText.setText(dt4.get(i).getName());
                 bottomText.setText(dt4.get(i+1).getName());
-                Toast.makeText(getApplicationContext(),"준결승 시작!", Toast.LENGTH_SHORT).show();
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt8.get(i).getId());
@@ -174,11 +182,11 @@ public class MainActivity2 extends AppCompatActivity {
                 i = 0;
                 cnt = 0;
                 round /= 2;
+                rnd.setText("결승");
                 leftImgView.setImageResource(dt2.get(i).getId());
                 rightImgView.setImageResource(dt2.get(i+1).getId());
                 topText.setText(dt2.get(i).getName());
                 bottomText.setText(dt2.get(i+1).getName());
-                Toast.makeText(getApplicationContext(),"결승 시작!", Toast.LENGTH_SHORT).show();
             } else {
                 cnt++;
                 leftImgView.setImageResource(dt4.get(i).getId());
