@@ -8,14 +8,61 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="500dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="40dp"
         android:scaleType="fitXY"
+        android:src="@drawable/bird"
         >
 
     </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="당신의 최애는 ?"
+        android:textSize="50sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/hoonparasol"
+        android:background="#FF5675"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:layout_marginBottom="130dp"
+        >
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="뫄뫄입니다"
+        android:textSize="75sp"
+        android:textColor="#A9000000"
+        android:fontFamily="@font/hoonparasol"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        android:gravity="center">
+
+    </TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다시 하기"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:fontFamily="@font/hoonparasol"
+        android:backgroundTint="#9BFF5675"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/goback">
+
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
